@@ -1,0 +1,157 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rajtilak Bhattacharjee">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='santa.png') }}">
+
+    <title>Secret Santa - r/IndiaSocial</title>
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            background: linear-gradient(to right, #004d00, #005c00, #004d00);
+            margin: 0;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            color: #000;
+        }
+
+        .smaller-heading {
+            font-size: 1.5rem; /* Adjust the font size as needed */
+        }
+
+        .logo-container {
+            margin-bottom: 1rem;
+        }
+
+        .logo {
+            width: 60px;
+            height: auto;
+        }
+
+        .card-container {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 20rem;
+            width: 100%;
+            text-align: center;
+            margin-top: 1rem;
+            position: relative;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .gradient-text {
+            color: #D6001C;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.1rem;
+            margin-top: 0.1rem;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #960014;
+            margin-bottom: 0.1rem;
+        }
+
+        .authorize-button,
+        .authorized-button,
+        button[type="submit"],
+        button[disabled] {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .authorize-button {
+            background-color: #D6001C;
+            color: #fff;
+        }
+
+        .authorized-button,
+        button[disabled] {
+            background-color: #5bc0de;
+            color: #fff;
+            cursor: not-allowed;
+        }
+
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            font-size: 18px;
+            color: #D6001C;
+            margin-top: 10px;
+            text-align: left; /* Align labels to the left */
+            display: block;
+        }
+
+        input[type="text"],
+        textarea {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #D6001C;
+            border-radius: 5px;
+            margin-top: 10px;
+            width: 300px;
+            box-sizing: border-box; /* Include padding and border in width */
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .footer {
+            margin-top: 0.5rem;
+            font-size: 14px;
+            color: #fff;
+        }
+
+        .success-message {
+            font-size: 1.2rem;
+            color: #D6001C;
+            margin-top: 1rem;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card-container">
+    <div class="logo-container">
+        <img src="{{ url_for('static', filename='santa.png') }}" alt="Logo" class="logo">
+    </div>
+        <h1 class="gradient-text">Secret Santa</h1>
+        <h2 class="subtitle">r/IndiaSocial</h2>
+
+        <div class="input-container">
+            <br><br>
+            <label>Your Reddit Username:</label>
+            <input type="text" value="{{ username }}" readonly name="username">
+
+            <br><br>
+            <p class="success-message">{{ success_message }}</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        Made with ❤️ by Rajtilak Bhattacharjee
+    </div>
+</body>
+
+</html>
