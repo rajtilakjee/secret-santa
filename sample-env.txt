@@ -1,0 +1,5 @@
+CLIENT_ID="xxxxxxxxxxxxxxxxxx"
+CLIENT_SECRET="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+REDIRECT_URI="http://xxxxxxxxxx.pythonanywhere.com/reddit_callback"
+SUPABASE_URL="https://xxxxxxxxxx.supabase.co"
+SUPABASE_KEY="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
